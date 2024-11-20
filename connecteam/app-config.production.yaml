@@ -3,20 +3,25 @@ organization:
 
 app:
   title: Connecteam
-  baseUrl: http://localhost:7007
+  baseUrl: https://backstage-poc.internal.connecteam.com
 
 auth:
   providers:
     github:
       development:
-        clientId: Ov23liuHSNOa6MsYUU96
-        clientSecret: dc7d1fef14a6beec653e69d3ea75b82f38b48e65
+        clientId:
+        clientSecret:
         signIn:
           resolvers:
             - resolver: usernameMatchingUserEntityName
 
+integrations:
+  github:
+    - host: github.com
+      token:
+
 backend:
-  baseUrl: http://localhost:7007
+  baseUrl: https://backstage-poc.internal.connecteam.com
   listen:
     port: 7007
 

@@ -3,7 +3,7 @@ organization:
 
 app:
   title: Connecteam
-  baseUrl: http://localhost:7007
+  baseUrl: https://backstage-poc.internal.connecteam.com/
 
 auth:
   providers:
@@ -16,7 +16,7 @@ auth:
             - resolver: usernameMatchingUserEntityName
 
 backend:
-  baseUrl: http://localhost:7007
+  baseUrl: https://backstage-poc.internal.connecteam.com/
   listen:
     port: 7007
 
