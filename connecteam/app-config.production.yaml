@@ -6,12 +6,11 @@ app:
   baseUrl: http://localhost:7007
 
 auth:
-  environment: production
   providers:
     github:
       development:
-        clientId: "Ov23liuHSNOa6MsYUU96"
-        clientSecret: "dc7d1fef14a6beec653e69d3ea75b82f38b48e65"
+        clientId: Ov23liuHSNOa6MsYUU96
+        clientSecret: dc7d1fef14a6beec653e69d3ea75b82f38b48e65
         signIn:
           resolvers:
             - resolver: usernameMatchingUserEntityName

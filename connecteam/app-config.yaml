@@ -6,7 +6,6 @@ app:
   baseUrl: http://localhost:7007
 
 auth:
-  environment: production
   providers:
     github:
       development:
