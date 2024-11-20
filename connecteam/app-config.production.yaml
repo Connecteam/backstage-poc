@@ -9,9 +9,9 @@ auth:
   environment: production
   providers:
     github:
-      production:
-        clientId: ${GITHUB_AUTH_CLIENT_ID}
-        clientSecret: ${GITHUB_AUTH_CLIENT_SECRET}
+      development:
+        clientId: "Ov23liuHSNOa6MsYUU96"
+        clientSecret: "dc7d1fef14a6beec653e69d3ea75b82f38b48e65"
         signIn:
           resolvers:
             - resolver: usernameMatchingUserEntityName
