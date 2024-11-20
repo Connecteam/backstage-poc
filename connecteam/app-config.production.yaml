@@ -20,13 +20,13 @@ backend:
   listen:
     port: 7007
 
-  database:
-    client: pg
-    connection:
-      host: 'backstage-postgresql'
-      port: '5432'
-      user: 'admin'
-      password: 'sdlkcjksdcnsdcsdc'
+    database:
+      client: pg
+      connection:
+        host: 'backstage-postgresql'
+        port: '5432'
+        user: 'bn_backstage'
+        password: 'sdlksdlkjlkncsdsdc'
 
 techdocs:
   publisher:
