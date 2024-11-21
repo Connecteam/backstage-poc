@@ -3,7 +3,7 @@
   "include": [
     "packages/*/src",
     "packages/app/src",
-    "packages/backend/src"
+    "packages/backend/src",
     "packages/*/config.d.ts",
     "plugins/*/src",
     "plugins/*/config.d.ts",
