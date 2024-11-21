@@ -22,12 +22,6 @@ integrations:
 
 backend:
   baseUrl: https://backstage-poc.internal.connecteam.com
-  reading:
-    allow:
-      - host: github.com
-      - host: '*.github.com'
-      - host: github.com
-        paths: ['/api/']
   listen:
     port: 7007
 
