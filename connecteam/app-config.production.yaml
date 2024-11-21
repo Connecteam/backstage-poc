@@ -13,7 +13,7 @@ auth:
         clientSecret:
         signIn:
           resolvers:
-            - resolver: usernameMatchingUserEntityName
+            - resolver:
 
 integrations:
   github:
@@ -22,6 +22,12 @@ integrations:
 
 backend:
   baseUrl: https://backstage-poc.internal.connecteam.com
+  reading:
+    allow:
+      - host: github.com
+      - host: '*.github.com'
+      - host: github.com
+        paths: ['/api/']
   listen:
     port: 7007
 
@@ -42,24 +48,14 @@ permission:
   enabled: true
 
 catalog:
-  import:
-    entityFilename: catalog-info.yaml
-    pullRequestBranchName: master
+  providers:
+    githubOrg:
+      id: production
+      githubUrl: https://github.com
+      orgs: [ 'Connecteam' ]
+      schedule:
+        initialDelay: { seconds: 30 }
+        frequency: { hours: 1 }
+        timeout: { minutes: 50 }
   rules:
-    - allow: [Component, System, API, Resource, Location]
-  locations:
-    # Local example data, file locations are relative to the backend process, typically `packages/backend`
-    - type: file
-      target: ./examples/entities.yaml
-
-    # Local example template
-    - type: file
-      target: ./examples/template/template.yaml
-      rules:
-        - allow: [Template]
-
-    # Local example organizational data
-    - type: file
-      target: ./examples/org.yaml
-      rules:
-        - allow: [User, Group]
+    - allow: [Component, System, API, Resource, Location, User, Groups]
