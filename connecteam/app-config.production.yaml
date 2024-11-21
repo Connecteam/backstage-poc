@@ -9,16 +9,16 @@ auth:
   providers:
     github:
       development:
-        clientId:
-        clientSecret:
+        clientId: ${GITHUB_AUTH_CLIENT_ID}
+        clientSecret: ${GITHUB_AUTH_CLIENT_SECRET}
         signIn:
           resolvers:
-            - resolver:
+            - resolver: usernameMatchingUserEntityName
 
 integrations:
   github:
     - host: github.com
-      token:
+      token: ${GITHUB_ACCESS_TOKEN}
 
 backend:
   baseUrl: https://backstage-poc.internal.connecteam.com
@@ -28,10 +28,10 @@ backend:
     database:
       client: pg
       connection:
-        host: 'backstage-postgresql'
-        port: '5432'
-        user: 'bn_backstage'
-        password: 'sdlksdlkjlkncsdsdc'
+        host: ${POSTGRES_HOST}
+        port: ${POSTGRES_PORT}
+        user: ${POSTGRES_USER}
+        password: ${POSTGRES_PASSWORD}
 
 techdocs:
   publisher:
